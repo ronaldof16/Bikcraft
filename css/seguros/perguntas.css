@@ -27,6 +27,7 @@
 .perguntas dt::before {
     content: "";
     display: inline-block;
+    
     width: 12px;
     height: 8px;
     background: var(--cor-p1);
