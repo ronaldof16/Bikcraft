@@ -12,7 +12,7 @@
     border-radius: 4px;
 }
 
-.perguntas div:nth-child(odd) {
+.perguntas div:nth-child(even) {
     background: var(--cor-1);
 }
 
