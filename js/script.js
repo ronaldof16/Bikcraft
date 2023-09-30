@@ -1,5 +1,4 @@
 // Ativar links do menu 
-
 let links = document.querySelectorAll(".header-menu a");
 
 function ativarLink(link) {
@@ -14,7 +13,6 @@ function ativarLink(link) {
 links.forEach(ativarLink);
 
 // Ativar itens do orçamento
-
 const parametro = new URLSearchParams(location.search);
 
 function ativarProduto(parametro) {
@@ -27,7 +25,6 @@ function ativarProduto(parametro) {
 parametro.forEach(ativarProduto);
 
 // Perguntas frequentes
-
 let perguntas = document.querySelectorAll(".perguntas button");
 function ativarPergunta(event) {
     let pergunta = event.currentTarget;
@@ -44,3 +41,21 @@ function eventosPerguntas(pergunta) {
 }
 
 perguntas.forEach(eventosPerguntas);
+
+// Galeria de Bicicletas
+let galeria = document.querySelectorAll(".bicicleta-imagens img");
+let galeriaContainer = document.querySelector(".bicicleta-imagens");
+
+function trocarImagem(event) {
+    let img = event.currentTarget;
+    let media = matchMedia("(min-width: 1000px)").matches;
+    if(media) {
+        galeriaContainer.prepend(img);
+    }
+}
+
+function eventosGaleria(img) {
+    img.addEventListener("click", trocarImagem);
+}
+
+galeria.forEach(eventosGaleria);
